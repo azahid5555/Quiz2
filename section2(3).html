@@ -26,11 +26,11 @@
           <div class="row">
             <div class="col">
                 <label for="" class="form-label mt-5">Number</label>
-                <input type="text" class="form-control mb-4" id="input1" />
+                <input type="number" class="form-control mb-4" id="input1" />
             </div>
             <div class="col">
                 <label for="" class="form-label mt-5">Decimal Place</label>
-                <input type="text" class="form-control mb-4" id="input2" />
+                <input type="number" class="form-control mb-4" id="input2" />
             </div>
           </div>
           <button class="btn btn-outline-danger" onclick="Spdecimals();">
@@ -46,8 +46,6 @@
     <script>
         function Spdecimals(){
             function decimals(n, d) {
-            if ((typeof n !== 'number') || (typeof d !== 'number'))
-            return false;
                 n = parseFloat(n) || 0;
             return n.toFixed(d);
             }
