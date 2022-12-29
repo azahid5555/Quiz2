@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <main class="container">
+      <div class="row">
+        <div class="col-md-4">
+
+          <div class="row">
+            <div class="col">
+                <label for="" class="form-label mt-5">Number</label>
+                <input type="text" class="form-control mb-4" id="input1" />
+            </div>
+            <div class="col">
+                <label for="" class="form-label mt-5">Decimal Place</label>
+                <input type="text" class="form-control mb-4" id="input2" />
+            </div>
+          </div>
+          <button class="btn btn-outline-danger" onclick="Spdecimals();">
+            Calculate
+          </button>
+          <p id="result1" class="mt-5 display-4 fs-4"></p>
+          <p id="result2" class="mt-5 display-4 fs-4"></p>
+
+        </div>
+      </div>
+    </main>
+
+    <script>
+        function Spdecimals(){
+            function decimals(n, d) {
+            if ((typeof n !== 'number') || (typeof d !== 'number'))
+            return false;
+                n = parseFloat(n) || 0;
+            return n.toFixed(d);
+            }
+            let input1 = Number(document.getElementById("input1").value);
+            let decpoint = Number(document.getElementById("input2").value);
+            let finalresult = (decimals(input1, decpoint));
+            document.getElementById("result1").innerHTML = finalresult;
+            
+        }
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <style>
+        .mainlist{
+            list-style-type: decimal;
+        }
+    </style>
+  </head>
+
+  <body>
+    <main class="container">
+        <div class="row">
+            <div class="col-12">
+                <p class="fs-4 display-4">Differentiate arrow functions and regular functions</p>
+            </div>
+            <div class="col-12">
+                <ul class="mainlist">
+                    <li>The main Difference between Regular Function and Arrow Function is the change in syntax. Regular function can define with <b>Function</b> Keyword but arrow function define with arrow (=>)</li>
+                    <ul>
+                        <li><b>For Example</b></li>
+                        <ul>
+                            <li><b>Regular Function</b><br>
+                                <code>
+                                    function functionName(){
+                                        functionBody
+                                    }
+                                </code>
+                            </li>    
+                            <li><b>Arrow Function</b><br>
+                                <code>
+                                    const functionName = ()=>{
+                                        functionBody
+                                    }
+                                </code>
+                            </li>    
+                        </ul>
+                    </ul>
+                    <li>Another main difference is the <b>Ability of arguments an Objects.</b> Arguments objects are not available in arrow function but are available in regular functions.</li>
+                    <ul>
+                        <li><b>For Example</b></li>
+                        <ul>
+                            <li><b>Regular Function</b><br>
+                                <pre>
+                                    let user = {   
+                                        show(){
+                                            console.log(arguments);
+                                        }
+                                    };
+                                    user.show(1, 2, 3);
+                                </pre>
+                                <img class="d-block" src="./img1.png" alt="">
+                            </li>    
+                            <li><b>Arrow Function</b><br>
+                                <pre>
+                                    let user = {   
+                                        show_ar : () => {
+                                        console.log(...arguments);
+                                    }
+                                };
+                                user.show_ar(1, 2, 3);
+                                </pre>
+                                <img class="d-block" src="./img2.png" alt="">
+                            </li>    
+                        </ul>
+                    </ul>
+                    <li>Another main difference between Regular function and Arrow function is the invoke of Constructor. Arrow function cancot be use as <b>Constructor</b></li>
+                    <ul>
+                        <li><b>For Example</b></li>
+                        <ul>
+                            <li><b>Regular Function</b><br>
+                                <pre>
+                                    function Hair(color) {
+                                        this.color = color;
+                                      }
+                                      const redHair = new Hair('red');
+                                      redHair instanceof Hair; // => true
+                                </pre>
+                            </li>    
+                            <li><b>Arrow Function</b><br>
+                                <pre>
+                                    const Hair = (color) => {
+                                        this.color = color;
+                                      };
+                                      const redHair = new Hair('red'); // TypeError: Hair is not a constructor
+                                </pre>
+                            </li>    
+                        </ul>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+
